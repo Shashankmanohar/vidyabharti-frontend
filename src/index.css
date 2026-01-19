@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Modern Minimal Palette - Based on Logo */
+    --background: 40 20% 98%;
+    --foreground: 30 10% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 20%;
+
+    /* Primary - Warm Orange from Logo */
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 30 92% 60%;
+    --primary-dark: 20 90% 45%;
+
+    /* Secondary - Soft Warm Gray */
+    --secondary: 35 15% 95%;
+    --secondary-foreground: 30 10% 25%;
+
+    /* Accent - Deep Maroon/Red from Logo */
+    --accent: 5 70% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 8 75% 52%;
+    --accent-dark: 2 65% 38%;
+
+    /* Neutrals - Warm tones */
+    --muted: 35 12% 92%;
+    --muted-foreground: 30 8% 50%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 10% 90%;
+    --input: 35 10% 90%;
+    --ring: 25 95% 53%;
+
+    --radius: 0.75rem;
+
+    /* Gradients - Softer, more elegant */
+    --gradient-hero: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(5 70% 45%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(5 70% 45%) 0%, hsl(2 65% 38%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(30 10% 10% / 0.6) 0%, hsla(30 10% 10% / 0.85) 100%);
+
+    /* Shadows - Softer, more refined */
+    --shadow-soft: 0 2px 15px -3px hsla(30 10% 20% / 0.06);
+    --shadow-medium: 0 6px 25px -5px hsla(30 10% 20% / 0.1);
+    --shadow-strong: 0 15px 40px -10px hsla(30 10% 20% / 0.15);
+    --shadow-accent: 0 6px 25px -5px hsla(25 95% 53% / 0.25);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 30 10% 20%;
+    --sidebar-primary: 25 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 15% 95%;
+    --sidebar-accent-foreground: 30 10% 25%;
+    --sidebar-border: 35 10% 90%;
+    --sidebar-ring: 25 95% 53%;
+  }
+
+  .dark {
+    --background: 20 25% 8%;
+    --foreground: 45 20% 96%;
+
+    --card: 20 25% 12%;
+    --card-foreground: 45 20% 96%;
+
+    --popover: 20 25% 12%;
+    --popover-foreground: 45 20% 96%;
+
+    --primary: 28 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 32 90% 65%;
+    --primary-dark: 24 80% 45%;
+
+    --secondary: 48 80% 55%;
+    --secondary-foreground: 20 25% 15%;
+
+    --accent: 8 75% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 20 20% 18%;
+    --muted-foreground: 20 15% 55%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 20% 20%;
+    --input: 20 20% 20%;
+    --ring: 28 85% 55%;
+
+    --sidebar-background: 20 25% 10%;
+    --sidebar-foreground: 45 20% 96%;
+    --sidebar-primary: 28 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 20 20% 18%;
+    --sidebar-accent-foreground: 45 20% 96%;
+    --sidebar-border: 20 20% 20%;
+    --sidebar-ring: 28 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer components {
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .bg-gradient-overlay {
+    background: var(--gradient-overlay);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+
+  .shadow-accent {
+    box-shadow: var(--shadow-accent);
+  }
+}
