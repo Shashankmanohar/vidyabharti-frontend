@@ -73,7 +73,7 @@ const AdminDashboard = () => {
     const fetchData = async (token: string) => {
         try {
             // Fetch visits
-            const visitsResponse = await fetch("http://localhost:5000/api/admin/visits", {
+            const visitsResponse = await fetch("https://vidyabharti-backend.vercel.app/api/admin/visits", {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

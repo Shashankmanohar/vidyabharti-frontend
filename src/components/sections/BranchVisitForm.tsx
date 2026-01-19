@@ -39,7 +39,7 @@ export const BranchVisitForm = () => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch("http://localhost:5000/api/branch-visits", {
+            const response = await fetch("https://vidyabharti-backend.vercel.app/api/branch-visits", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
